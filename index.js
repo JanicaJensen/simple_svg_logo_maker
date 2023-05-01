@@ -1,6 +1,8 @@
 // Dependencies that are required to run the app.
 const inquirer = require("inquirer");
 const fs = require("fs");
+// const {Circle, Triangle, Square} = require('./lib/shapes.js');
+
 
 
 
@@ -10,12 +12,17 @@ const questions = [
     {
         type: 'input', 
         name: 'text', 
-        message: 'Enter the text of the logo:'
+        message: 'Enter the text of the logo:', 
+        validate: (response) => {
+            if(response.length > 0 && response.length <4){
+                return true;
+            } else return 'Must be between 1 and 3 characters!';
+        }
     },
     {
         type: 'input', 
         name: 'textColor', 
-        message: 'What color do you want your text?'
+        message: 'What color do you want your text?',
     },
     {
         type: 'list',
@@ -26,7 +33,7 @@ const questions = [
     {
         type: 'input', 
         name: 'shapeColor', 
-        message: 'What color should the shape be?:'
+        message: 'What color should the shape be?:',
     }
 ];
 
