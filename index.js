@@ -1,11 +1,11 @@
-// packages needed to run application
+
 const fs = require('fs');
 const inquirer = require('inquirer');
 const { Circle, Triangle, Square } = require('./lib/shapes.js');
 
 
 
-// questions for the user to be answered
+
 const questions = [
     {
         type: 'input',
@@ -33,7 +33,7 @@ const questions = [
     }
 ];
 
-// Function that contains a switch case statement to determine which shape the user has selected
+
 function generateLogo(text, textColor, shape, shapeColor) {
     switch (shape) {
         case 'Circle':
@@ -48,13 +48,13 @@ function generateLogo(text, textColor, shape, shapeColor) {
     }
 }
 
-// Function to write the logo.svg file 
+
 function writeTofile(fileName, data) {
     fs.writeFile(fileName, data,
         (err) => err ? console.log(err) : console.log("Logo was generated!"))
 }
 
-// Function that utilizes the user prompts to then intialize the logo
+
 function init() {
     inquirer
         .prompt(questions)
