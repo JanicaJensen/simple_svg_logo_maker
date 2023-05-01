@@ -51,7 +51,7 @@ function generateLogo(text, textColor, shape, shapeColor) {
 
 function writeTofile(fileName, data) {
     fs.writeFile(fileName, data,
-        (err) => err ? console.log(err) : console.log("Logo was generated!"))
+        (err) => err ? console.log(err) : console.log("Generated logo.svg"))
 }
 
 

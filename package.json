@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/JanicaJensen/simple_svg_logo_maker/issues"
   },
-  "homepage": "https://github.com/JanicaJensen/simple_svg_logo_maker#readme"
+  "homepage": "https://github.com/JanicaJensen/simple_svg_logo_maker#readme",
+  "devDependencies": {
+    "jest": "^29.5.0"
+  }
 }
