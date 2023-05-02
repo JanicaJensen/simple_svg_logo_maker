@@ -1,11 +1,11 @@
-
+// These are the dependencies, the required documents and node packages.
 const fs = require('fs');
 const inquirer = require('inquirer');
 const { Circle, Triangle, Square } = require('./lib/shapes.js');
 
 
 
-
+// questions for node package inquirer.js to take in user input
 const questions = [
     {
         type: 'input',
@@ -33,7 +33,8 @@ const questions = [
     }
 ];
 
-
+// function to generate the logo,including arguments for the text and its color and the shape and its color.
+//This utilizes switch cases
 function generateLogo(text, textColor, shape, shapeColor) {
     switch (shape) {
         case 'Circle':
@@ -48,13 +49,13 @@ function generateLogo(text, textColor, shape, shapeColor) {
     }
 }
 
-
+// this is the function that specifies how the svg file should be written and what should be logged if successful
 function writeTofile(fileName, data) {
     fs.writeFile(fileName, data,
         (err) => err ? console.log(err) : console.log("Generated logo.svg"))
 }
 
-
+// this is the initialize function which runs the program and includes the generateLogo and writeToFile functions.
 function init() {
     inquirer
         .prompt(questions)
@@ -73,7 +74,7 @@ function init() {
 }
 
 
-
+// initializes the program
 init();
 
 
