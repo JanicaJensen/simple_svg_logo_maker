@@ -1,0 +1,25 @@
+{
+  "name": "simple_svg_logo_maker",
+  "version": "1.0.0",
+  "description": "A simple SVG logo maker, done as an assignment for class.",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JanicaJensen/simple_svg_logo_maker.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JanicaJensen/simple_svg_logo_maker/issues"
+  },
+  "homepage": "https://github.com/JanicaJensen/simple_svg_logo_maker#readme",
+  "devDependencies": {
+    "jest": "^29.5.0"
+  }
+}
